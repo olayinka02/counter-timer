@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<title>counter-timer</title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../counter-timer/css/style0ne.css"/>
+  
+
+   
+</head>
+<body>
+    <center>
+        <div class="container timerbackground">
+            <div style="float:right;padding-top:0.5rem;">
+                <button type="button" class="btn btn-light  btn-sm" style="color:#216740;background-color:white;">Login</button>
+                <button style="background-color:#216740;color:white;border-radius:0.4rem;" type="button" class="btn btn-success btn-sm">sign-up</button>
+                  
+
+            </div>
+            <div class="timerbody">
+                <h2 style="color:#216740;word-spacing:0.1rem;font-size:1.5rem;">We are launching in</h2>
+                <p style="font-size:0.6rem;width:16rem;padding-top:-6rem;align-items: flex-start;">A social betting network where you can follow, share and copy 
+                better from our community and friends</p>
+
+                <div class="container timerbox">
+                    <div class="row">
+                        <div class="col-sm timerbox1">
+                            <center><p id="days"  style="font-size:1.6rem;font-style:bolder;"></p>
+                            <p style="font-size: 0.9rem;padding-bottom:0.1rem;margin-top:-0.3rem;">Day</p></center>
+                        </div>
+
+                        <div class="col-sm timerbox2">
+                            <center><p id="hrs" style="font-size:1.6rem;font-style:bold;"></p>
+                            <p style="font-size: 0.9rem;padding-bottom:0.1rem;margin-top:-0.3rem;">Hour</p></center>
+                        </div>
+
+                        <div class="col-sm timerbox2">
+                            <center><p id="min" style="font-size:1.6rem;font-style:bold;"></p>
+                            <p style="font-size: 0.9rem;padding-bottom:0.1rem;margin-top:-0.3rem;">min</p></center>
+                        </div>
+
+                        <div class="col-sm timerbox2">
+                            <center><p id="sec" style="font-size:1.6rem;font-style:bold;"></p>
+                            <p style="font-size: 0.9rem;padding-bottom:0.1rem;margin-top:-0.3rem;">Sec</p></center>
+                        </div>
+                    </div>
+
+                   
+                   
+                
+                </div>
+                <form class="formbody">
+                    <div class="form-group">
+                        <input style="border-radius:0.3rem;" type="email" class="form-control-sm" id="InputEmail" aria-describedby="emailHelp" />
+                         <button style="background-color:#216740;color:white;border-radius:0.4rem;" type="button" class="btn btn-success btn-sm">sign-up</button>   
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </center>
+
+
+    <script type="text/javascript">
+        function countDown()
+        {
+            var today = new Date();
+            var eventDate = new Date("march 30,2021 00:00:00");
+ 
+            var currentTime = today.getTime();
+            var eventTime = eventDate.getTime();
+ 
+            var remTime = eventTime - currentTime;
+ 
+            var sec = Math.floor(remTime/1000);
+            var min = Math.floor(sec/60);
+            var hrs = Math.floor(min/60);
+            var days = Math.floor(hrs/24);
+ 
+            hrs = hrs % 24;
+            min%=60;
+            sec%=60;
+ 
+            hrs = (hrs<10) ? "0"+hrs : hrs;
+            min = (min<10) ? "0"+min : min;
+            sec = (sec<10) ? "0"+sec : sec;
+ 
+            document.getElementById("days").innerHTML= days;
+            document.getElementById("hrs").innerHTML= hrs;
+            document.getElementById("min").innerHTML= min;
+            document.getElementById("sec").innerHTML= sec;
+            
+            setTimeout(countDown,1000);
+        }
+         countDown();
+ 
+     </script>
+   
+
+</body>
+</html>
+     
