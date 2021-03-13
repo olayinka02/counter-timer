@@ -26,7 +26,7 @@ body {
   }
 
   div.timerbackground{
-    background-image:none;
+    background-image: none;
     background-repeat: no-repeat;
     
     
@@ -90,7 +90,10 @@ form.formbody{
   
   
   /* Small devices (landscape phones, 576px and up) */
-  @media (min-width: 576px) {  
+  @media (min-width: 576px) { 
+    body{
+      background-color:#216740;
+    } 
     div.timerbackground{
       background-image:none;
       background-repeat: no-repeat;
@@ -155,6 +158,9 @@ form.formbody{
   
   /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
   @media (min-width: 768px) { 
+    body{
+      background-color:#216740;
+    } 
     div.timerbackground{
       background-image:none;
       background-repeat: no-repeat;
@@ -221,7 +227,7 @@ form.formbody{
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) { 
     div.timerbackground{
-      background-image: url(../image/timer.gif);
+      background-image:  url(../counter-timer/image/timer.gif);;
       background-repeat: no-repeat;
       width: 60%;
       height:63vh;
@@ -287,8 +293,10 @@ form.formbody{
   @media (min-width: 1200px) {
   
     div.timerbackground{
-        background-image: url(../image/timer.gif);
+        background-image: url(../counter-timer/image/timer.gif);
         background-repeat: no-repeat;
+        background-position: center;
+      
         width: 60%;
         height:63vh;
         border-radius:2rem;
