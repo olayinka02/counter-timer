@@ -227,7 +227,7 @@ form.formbody{
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 992px) { 
     div.timerbackground{
-      background-image:  url(../counter-timer/image/timer.gif);;
+      background-image:  url(/image/timer.gif);;
       background-repeat: no-repeat;
       width: 60%;
       height:63vh;
@@ -293,7 +293,7 @@ form.formbody{
   @media (min-width: 1200px) {
   
     div.timerbackground{
-        background-image: url(../counter-timer/image/timer.gif);
+        background-image: url(/image/timer.gif);
         background-repeat: no-repeat;
         background-position: center;
       
